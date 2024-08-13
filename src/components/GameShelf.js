@@ -17,10 +17,12 @@ function GameShelf() {
 
     return(
         <div>
-          <button onClick={logGames}>Log Games</button>
+          {/* <button onClick={logGames}>Log Games</button> */}
+          <div className="game-shelf">
             {gamesData.map((game) => {
                 return <Game key={game.id} game={game} />
             })}
+          </div>
         </div>
     )
 }

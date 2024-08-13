@@ -16,9 +16,16 @@
 .game-shelf {
     width: auto;
     height: auto;
-    /* display: flex; */
+    display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    background-color: rgb(60, 45, 75);
-    padding-bottom: 40px;
+    /* background-color: rgb(60, 45, 75); */
+    padding: 50px;
+}
+
+.game-thumbnail {
+    width: 100px;
+    height: auto;
+    margin-right: 10px;
+    border-radius: 10px;
 }

@@ -1,16 +1,15 @@
-import { Link, useParams } from "react-router-dom"
+import { Link } from "react-router-dom"
 
 function Game({ game }) {
 
-    const { title, id } = game
+    const { title, id, thumbnail, description } = game
 
     return(
-        <div>
-            <h3>
-                <Link to={`/games/${id}`}>{title}</Link>
-            </h3>
-        </div>
+        <>
+            <img className="game-thumbnail" src={thumbnail} alt={title}/>
+        </>
     )
 }
 
 export default Game
+

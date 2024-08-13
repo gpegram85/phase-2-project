@@ -3,7 +3,7 @@ import "./NavBar.css";
 
 function NavBar() {
   return (
-    <nav>
+    <nav className="navbar">
       <NavLink
         to="/"
         className="nav-link"
