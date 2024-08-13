@@ -11,9 +11,9 @@ function GameShelf() {
       .then(data => setGamesData(data))
     }, [])
   
-    const logGames = () => {
-      console.log("Fetched Games: ", gamesData)
-    }
+    // const logGames = () => {
+    //   console.log("Fetched Games: ", gamesData)
+    // }
 
     return(
         <div>

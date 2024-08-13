@@ -1,13 +1,13 @@
-import NavBar from "../components/NavBar"
 import GameShelf from "../components/GameShelf"
+import { Outlet } from "react-router-dom"
 
 
 function Collection() {
 
     return(
         <div>
-            <NavBar />
             <GameShelf />
+            <Outlet />
         </div>
     )
 }

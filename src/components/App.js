@@ -1,23 +1,16 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
+import NavBar from "./NavBar";
+import { Outlet } from "react-router-dom";
 
 function App() {
 
-  const [games, setGames] = useState([])
-
-  useEffect(() => {
-    fetch(`http://localhost:3000/games`)
-    .then(resp => resp.json())
-    .then(data => setGames(data))
-  }, [])
-
-  const logGames = () => {
-    console.log("Fetched Games: ", games)
-  }
-
   return (
-    <div className="App">
-      <p>Placeholder</p>
-    </div>
+    <>
+      <header>
+        <NavBar />
+      </header>
+      <Outlet />
+    </>
   );
 }
 
