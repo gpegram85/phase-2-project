@@ -17,7 +17,6 @@ function App() {
   return (
     <div className="App">
       <p>Placeholder</p>
-      <button onClick={logGames}>Log Game List</button>
     </div>
   );
 }
