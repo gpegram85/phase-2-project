@@ -33,3 +33,31 @@
 .text-box {
     width: auto;
 }
+
+.form {
+    width: auto;
+    height: auto;
+    display: flex;
+    justify-content: center;
+}
+
+.form input {
+    border-radius: 10px;
+    text-align: center;
+    display: flex;
+    margin: 10px;
+}
+
+.form-container {
+    text-align: center;
+}
+
+.search-bar {
+    display: flex;
+    justify-content: center;
+}
+
+.search-bar input {
+    border-radius: 10px;
+    margin-top: 10px;
+}
