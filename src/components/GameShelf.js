@@ -27,40 +27,33 @@ function GameShelf() {
       }
     }
 
-    const [gameTitle, setGameTitle] = useState("")
-    const [gameImage, setGameImage] = useState("")
-    const [gameDescription, setGameDescription] = useState("")
-    const [gameGenre, setGameGenre] = useState("")
+    const [newGame, setNewGame] = useState({
+      title: "",
+      splash: "",
+      description: "",
+      genre: ""
+  });
+  
+  const handleChange = (e) => {
+      const { name, value } = e.target;
+      setNewGame({
+          ...newGame,
+          [name]: value
+      });
+  };
 
-    const handleTitleChange = (e) => {
-        setGameTitle(e.target.value)
-    }
+  const onGameSubmit = (e) => {
+    e.preventDefault()
 
-    const handleDescriptionChange = (e) => {
-        setGameDescription(e.target.value)
-    }
+    handleAddGame(newGame)
 
-    const handleImageChange = (e) => {
-        setGameImage(e.target.value)
-    }
-
-    const handleGenreChange = (e) => {
-        setGameGenre(e.target.value)
-    }
-
-    const onGameSubmit = (e) => {
-        const newGame = {
-            title: gameTitle,
-            splash: gameImage,
-            genre: gameGenre,
-            descriprion: gameDescription
-        }
-        handleAddGame(newGame)
-        setGameDescription("")
-        setGameGenre("")
-        setGameImage("")
-        setGameTitle("")
-    }
+    setNewGame({
+        title: "",
+        splash: "",
+        description: "",
+        genre: ""
+    })
+}
 
     const handleAddGame =(newGame) => {
       
@@ -105,30 +98,38 @@ function GameShelf() {
                 type="text" 
                 name="name" 
                 placeholder="Game title..." 
-                value={gameTitle}
-                onChange={handleTitleChange}
+                value={newGame.title}
+                onChange={handleChange}
                 />
             <input  
                 type="text" 
                 name="image" 
                 placeholder="Game Image URL..." 
-                value={gameImage}
-                onChange={handleImageChange}
+                value={newGame.splash}
+                onChange={handleChange}
                 />
             <input  
                 type="text" 
                 name="description" 
                 placeholder="Game description..."
-                value={gameDescription} 
-                onChange={handleDescriptionChange}
+                value={newGame.description} 
+                onChange={handleChange}
                 />
             <input  
                 type="text" 
                 name="genre" 
                 placeholder="Game genre..."
-                value={gameGenre} 
-                onChange={handleGenreChange}
+                value={newGame.genre} 
+                onChange={handleChange}
                 />
+              <input  
+                type="text" 
+                name="thumbnail" 
+                placeholder="Game thumbnail URL..."
+                value={newGame.thumbnail} 
+                onChange={handleChange}
+                />
+                <button type="submit" className="submit-button">Submit</button>
             </form>
           </div>
         </div>

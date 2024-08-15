@@ -1,3 +1,7 @@
+body {
+    width: auto;
+}
+
 .game-box {
     flex: 0 0 325px;
     height: 400px;
@@ -60,4 +64,26 @@
 .search-bar input {
     border-radius: 10px;
     margin-top: 10px;
+}
+
+.submit-button {
+    width: 80px;
+    padding: 5px;
+    margin: 0 6px 6px;
+    background: rgb(170, 170, 245);
+    text-decoration: none;
+    text-align: center;
+    font-size: min(10vw, 15px) ;
+    color: white;
+    border-radius: 10px;
+}
+
+.splash-container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.splash-container img {
+    width: 50%;
 }

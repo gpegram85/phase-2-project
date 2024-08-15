@@ -3,7 +3,7 @@ import { useParams } from "react-router-dom"
 
 function GameCard() {
 
-    const [game, setGame] = useState()
+    const [game, setGame] = useState(null)
     const { gameId } = useParams()
 
     useEffect(() => {
@@ -15,7 +15,15 @@ function GameCard() {
 
     return(
         <div>
-            {game ? game.title : <p>Loading...</p>}
+            {game ? (
+                <div>
+                    {game.title}
+                    <p>{game.description}</p>
+                    <div className="splash-container">
+                        <img src={`${process.env.PUBLIC_URL}${game.splash.slice(1)}`} alt="Game Thumbnail" />
+                    </div>
+                </div>
+                    ) : (<p>Loading...</p>)}
         </div>
     )
 }
