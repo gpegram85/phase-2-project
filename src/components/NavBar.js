@@ -1,5 +1,5 @@
-import { NavLink } from "react-router-dom";
-import "./NavBar.css";
+import { NavLink } from 'react-router-dom';
+import './NavBar.css';
 
 function NavBar() {
   return (
@@ -17,13 +17,13 @@ function NavBar() {
         Collection
       </NavLink>
       <NavLink
-        to="/profile"
+        to="/blog"
         className="nav-link"
       >
-        Profile
+        Blog
       </NavLink>
     </nav>
   );
-};
+}
 
 export default NavBar;
