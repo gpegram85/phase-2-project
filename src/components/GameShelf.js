@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import Game from './Game';
 import SearchBar from '../components/SearchBar';
+import GameForm from './GameForm';
 
 function GameShelf() {
   const [gamesData, setGamesData] = useState([]);
@@ -26,33 +27,33 @@ function GameShelf() {
     }
   };
 
-  const [newGame, setNewGame] = useState({
-    title: '',
-    splash: '',
-    description: '',
-    genre: '',
-  });
+  // const [newGame, setNewGame] = useState({
+  //   title: '',
+  //   splash: '',
+  //   description: '',
+  //   genre: '',
+  // });
 
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    setNewGame({
-      ...newGame,
-      [name]: value,
-    });
-  };
+  // const handleChange = (e) => {
+  //   const { name, value } = e.target;
+  //   setNewGame({
+  //     ...newGame,
+  //     [name]: value,
+  //   });
+  // };
 
-  const onGameSubmit = (e) => {
-    e.preventDefault();
+  // const onGameSubmit = (e) => {
+  //   e.preventDefault();
 
-    handleAddGame(newGame);
+  //   handleAddGame(newGame);
 
-    setNewGame({
-      title: '',
-      splash: '',
-      description: '',
-      genre: '',
-    });
-  };
+  //   setNewGame({
+  //     title: '',
+  //     splash: '',
+  //     description: '',
+  //     genre: '',
+  //   });
+  // };
 
   const handleAddGame = (newGame) => {
     fetch(`http://localhost:3000/games/`, {
@@ -97,7 +98,8 @@ function GameShelf() {
         </div>
         <div className="form-container">
           <p>Add a new game to your collection.</p>
-          <form
+          <GameForm handleAddGame={handleAddGame}/>
+          {/* <form
             onSubmit={onGameSubmit}
             className="form"
           >
@@ -142,7 +144,7 @@ function GameShelf() {
             >
               Submit
             </button>
-          </form>
+          </form> */}
         </div>
       </div>
     </>

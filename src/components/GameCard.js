@@ -15,11 +15,11 @@ function GameCard() {
     <div>
       {game ? (
         <div>
-          {game.title}
+          <h2>{game.title}</h2>
           <p>{game.description}</p>
           <div className="splash-container">
             <img
-              src={`${process.env.PUBLIC_URL}${game.splash.slice(1)}`}
+              src={`${game.splash}`}
               alt="Game Thumbnail"
             />
           </div>
