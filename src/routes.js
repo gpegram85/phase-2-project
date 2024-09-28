@@ -16,12 +16,14 @@ const routes = [
         element: <Home />,
       },
       {
-        path: '/collection',
+        path: '/games',
         element: <GameCollection />,
-      },
-      {
-        path: '/games/:gameId',
-        element: <GameCard />,
+        children: [
+          {
+            path: '/games/:gameId',
+            element: <GameCard />,
+          },
+        ],
       },
       {
         path: '/blog',

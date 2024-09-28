@@ -11,7 +11,7 @@ function NavBar() {
         Home
       </NavLink>
       <NavLink
-        to="/collection"
+        to="/games"
         className="nav-link"
       >
         Collection
