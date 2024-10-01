@@ -5,6 +5,7 @@ import GameForm from './GameForm';
 
 function GameShelf() {
   const [gamesData, setGamesData] = useState([]);
+  const [query, setQuery] = useState('');
 
   useEffect(() => {
     fetch(`http://localhost:3000/games`)
@@ -14,11 +15,11 @@ function GameShelf() {
       });
   }, []);
 
-  const onSearchInput = (searchQuery) => {
-      const filteredGames = gamesData.filter((game) =>
-        game.title.toLowerCase().includes(searchQuery.toLowerCase())
-      );
-      setGamesData(filteredGames);
+  const handleSearchInput = (searchQuery) => {
+    const filteredGames = gamesData.filter((game) =>
+      game.title.toLowerCase().includes(searchQuery.toLowerCase())
+    );
+    setGamesData(filteredGames);
   };
 
   const handleAddGame = (newGame) => {
@@ -46,7 +47,11 @@ function GameShelf() {
   return (
     <>
       <main>
-        <SearchBar onSearchInput={onSearchInput} />
+        <SearchBar
+          query={query}
+          onSearchInput={handleSearchInput}
+          setQuery={setQuery}
+        />
       </main>
       <div>
         <div className="game-shelf">
