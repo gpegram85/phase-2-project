@@ -15,12 +15,9 @@ function GameShelf() {
       });
   }, []);
 
-  const handleSearchInput = (searchQuery) => {
-    const filteredGames = gamesData.filter((game) =>
-      game.title.toLowerCase().includes(searchQuery.toLowerCase())
-    );
-    setGamesData(filteredGames);
-  };
+  const filteredGames = gamesData.filter((game) =>
+    game.title.toLowerCase().includes(query.toLowerCase())
+  );
 
   const handleAddGame = (newGame) => {
     fetch(`http://localhost:3000/games/`, {
@@ -49,14 +46,13 @@ function GameShelf() {
       <main>
         <SearchBar
           query={query}
-          onSearchInput={handleSearchInput}
           setQuery={setQuery}
         />
       </main>
       <div>
         <div className="game-shelf">
-          {gamesData.length > 0 ? (
-            gamesData.map((game) => (
+          {filteredGames.length > 0 ? (
+            filteredGames.map((game) => (
               <Game
                 key={game.id}
                 game={game}

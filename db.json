@@ -109,6 +109,22 @@
       "platform": "PC, PlayStation 4, Xbox One, Stadia",
       "release_date": "2020-12-10",
       "description": "In CyberPunk 2077, immerse yourself in the neon-lit streets of Night City, a sprawling metropolis filled with danger and opportunity at every turn. As V, a mercenary outlaw seeking a one-of-a-kind implant that is the key to immortality, navigate a world of corporate intrigue, cybernetic enhancements, and urban decay. With your choices shaping the story and the fate of the city, forge alliances, engage in high-octane combat, and explore a vast open world teeming with vibrant characters and hidden secrets. Prepare to uncover the dark underbelly of a future where technology and humanity collide, and your actions will determine the course of history in this epic action RPG adventure."
+    },
+    {
+      "id": "101e",
+      "title": "Skyrim",
+      "splash": "https://i.imgur.com/MvQRvSK.png",
+      "description": "I took an arrow to the knee.",
+      "genre": "Adventure/RPG",
+      "thumbnail": "https://i.imgur.com/kIHzHA7.png"
+    },
+    {
+      "id": "089e",
+      "title": "Skyrim",
+      "splash": "https://i.imgur.com/MvQRvSK.png",
+      "description": "I took an arrow to the knee.",
+      "genre": "Adventure/RPG",
+      "thumbnail": "https://i.imgur.com/kIHzHA7.png"
     }
   ]
 }
